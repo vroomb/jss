@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main() {
     char a;
@@ -33,10 +34,12 @@ int main() {
     scanf("%f", &t);
     // printf("%f\n", t);
 
-    if ((a == 's') && (a == 'S')) {
+    if ((a == 's') || (a == 'S')) {
         printf("simple intrest: %f", ((p*r*t)/100));
-    } else if ((a == 'c') && (a == 'C')) {
+    } else if ((a == 'c') || (a == 'C')) {
         printf("compound interest: %f", (p*(pow((1 + r*0.01), t))));
+    } else {
+        return  EXIT_FAILURE;
     }
     
     return 0;
