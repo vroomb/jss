@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <math.h>
 
@@ -5,8 +6,8 @@ int main() {
     char a;
     printf("type of interest(s/c): ");
     a = getchar();
-    while ((a != 's') && (a != 'c')){
-        printf("ur stupid\n");
+    while ((a != 's') && (a != 'c') && (a != 'S') && (a != 'C')){
+        printf("please only input s or c\n");
         printf("type of interest(s/c): ");
         a = getchar();
     }
@@ -22,7 +23,7 @@ int main() {
     printf("write rate: ");
     scanf("%f", &r);
     while ((0 > r) || (r > 100)) {
-        printf("ur stupid\n");
+        printf("r can neither be negative or above 100\n");
         printf("write rate: ");
         scanf("%f", &r);
     }
@@ -33,9 +34,9 @@ int main() {
     scanf("%f", &t);
     // printf("%f\n", t);
 
-    if (a == 's') {
+    if ((a == 's') && (a == 'S')) {
         printf("simple intrest: %f", ((p*r*t)/100));
-    } else if (a == 'c') {
+    } else if ((a == 'c') && (a == 'C')) {
         printf("compound interest: %f", (p*(pow((1 + r*0.01), t))));
     }
     
