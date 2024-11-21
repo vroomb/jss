@@ -27,23 +27,23 @@ int ffindword(char *word, FILE *input) {
 }
 
 int main(int argc, char **argv) {
-    char Help[] = "Findme.exe\n\nSYNTAX:\n    Findme.exe [file] [word]\n\nNOTES:\n    To include spaces in [file] or [word], enclose the respective in \"\" quotes.";
+    const char Help[] = "Findme.exe\n\nSYNTAX:\n    Findme.exe [file] [word]\n\nNOTES:\n    To include spaces in [file] or [word], enclose the respective in \"\" quotes.";
 
-    // if (argc != 3) {
-    //     printf("%s", Help);
-    //     return 0;
-    // }
-    
-    // if (argv[0][0] == '\"') {
-    //     for (int i = 0; i < argc; i++) {
-    //         for (int j = 0; argv[i][j]; j++) {
-    //             if (argv[i][j] == '\"') {
-    //                 strcat(arg, const char *restrict Source)
-    //             }
-    //         }
-    //     }
-    // }
-    // todo: add a way to parse ""
+    for (int i = 0; i < argc; i++) {
+        printf("\n%s", argv[i]);
+    }
+    printf("\n");
+
+    if (argc < 3) {
+        printf("%s", Help);
+        return 0;
+    }
+    else {
+        int length = 0;
+        for (int i = 0; i < argc; i++) {
+            length = length + strlen(argv[i]);
+        }
+    }
 
     FILE *input = fopen(argv[1], "r");
     if (!input){

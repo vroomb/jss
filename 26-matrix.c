@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Clear one singular line using VT100 escape code
+// Clear one singular line using ANSI escape code
 void clearlines(unsigned int n) {
     for (; n > 0; n--) {
         printf("\x1b[1F"); // Move to beginning of previous line
