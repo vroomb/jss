@@ -34,7 +34,7 @@ int main() {
     // printf("%f\n", t);
 
     if ((a == 's') || (a == 'S')) {
-        printf("simple intrest: %f", ((p*r*t)/100));
+        printf("simple interest: %f", ((p*r*t)/100));
     } else if ((a == 'c') || (a == 'C')) {
         printf("compound interest: %f", (p*(pow((1 + r*0.01), t))));
     }    

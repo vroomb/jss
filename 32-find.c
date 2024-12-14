@@ -58,5 +58,6 @@ int main(int argc, char **argv) {
     // }
 
     printf("%d", ffindword(argv[2], input));
+    fclose(input);
     return EXIT_SUCCESS;
 }

@@ -21,7 +21,7 @@ unsigned short int getorder(long long int number){
 
 // Gets the total width of a truncated number in string form.
 static inline unsigned short int getnumwidth(double number) {
-    return getorder(number) + 8;
+    return (number > 0) ? getorder(number) + 8 : getorder(number) + 9;
 }
 
 // Initialize an m x n matrix.
@@ -125,3 +125,6 @@ int main() {
     printmatrix(m, o, c);
     return 0;
 }
+
+
+

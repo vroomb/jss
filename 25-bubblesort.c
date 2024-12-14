@@ -36,13 +36,11 @@ int main() {
     printf("how long of an array? ");
     scanf("%hu", &n);
     int a[n];
-    for (short unsigned int i = 0; i < 10; i++) {
-        generaterandomarray(a, n);
-        printarray(a, n);
-        printf("\n\n");
-        bubblesort(a, n);
-        printarray(a, n);
-        printf("\n------------------------------------\n");
-    }
+    generaterandomarray(a, n);
+    printarray(a, n);
+    printf("\n\n");
+    bubblesort(a, n);
+    printarray(a, n);
+    printf("\n------------------------------------\n");
     return 0;
 }

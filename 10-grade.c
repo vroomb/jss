@@ -7,7 +7,7 @@ int main() {
     sum = s1 + s2+ s3+ s4+ s5;
     // printf("%d", sum);
     printf("Your grade is ");
-    if (sum >= 540) {
+    if (sum >= 450) {
         printf("A");
     } else if (sum >= 400) {
         printf("B");
